@@ -1,6 +1,23 @@
 # 🤖 Onboarding AI Assistant
 
-Este proyecto consiste en un **asistente inteligente basado en Recuperación de Información Aumentada (RAG)** que facilita el acceso rápido a información clave durante el proceso de incorporación de nuevos empleados. Utiliza técnicas de IA generativa y búsqueda semántica para responder preguntas en lenguaje natural a partir de documentos internos de RRHH.
+Un asistente conversacional basado en inteligencia artificial generativa y Recuperación de Información Aumentada (RAG) para facilitar el **proceso de incorporación de nuevos empleados** en una organización.
+
+Este sistema responde de forma natural a preguntas sobre **manuales internos, políticas de empresa y FAQs de RRHH**, reduciendo la carga de trabajo de los departamentos de recursos humanos y mejorando la experiencia de los nuevos trabajadores.
+
+---
+
+## 🧠 ¿Qué es RAG?
+
+**RAG (Retrieval-Augmented Generation)** es una técnica que combina:
+
+- 🔍 Recuperación de información relevante (mediante embeddings + búsqueda vectorial)
+- ✍️ Generación de respuestas con modelos de lenguaje (LLM)
+
+En este proyecto:
+- Se vectorizan documentos internos (manuales, políticas, etc.)
+- Se indexan con FAISS
+- Cuando un usuario hace una pregunta, se recuperan los fragmentos relevantes
+- Y se genera una respuesta coherente con OpenAI GPT-3.5 o superior
 
 ---
 
@@ -141,14 +158,24 @@ set OPENAI_API_KEY=tu_clave_aquí
 ### 5. Genera el índice vectorial
 
 ```bash
-python app/embed_and_index.py
+python embed_and_index.py
 ```
 
 ### 6. Lanza la aplicación web
 
 ```bash
-streamlit run app/interface.py
+$env:OPENAI_API_KEY="LA CLAVE..."
+streamlit run interface.py
 ```
+
+---
+
+## 💬 Ejemplos de preguntas
+¿Cuántos días de vacaciones tengo al año?
+¿Puedo coger vacaciones durante el periodo de prueba?
+¿Dónde solicito mis vacaciones?
+¿Puedo acumular días no disfrutados?
+¿Con cuánta antelación debo avisar para las vacaciones?
 
 ---
 
