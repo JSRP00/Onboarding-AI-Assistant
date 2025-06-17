@@ -149,3 +149,28 @@ python app/embed_and_index.py
 ```bash
 streamlit run app/interface.py
 ```
+
+---
+
+## ⚠️ Limitaciones y futuras mejoras
+
+### 🔍 Limitaciones actuales
+
+- **Cobertura limitada de datos**: El sistema solo responde sobre los documentos cargados manualmente. No accede en tiempo real a bases dinámicas (como SharePoint o intranets).
+- **Dependencia del lenguaje**: Está optimizado para textos y preguntas en español, pero puede fallar si se mezcla con otros idiomas o jergas no documentadas.
+- **Modelo externo (GPT-4)**: El uso de OpenAI requiere conexión a internet y una API Key. No es completamente autónomo ni privado.
+- **Sin gestión de usuarios ni autenticación**: Cualquier persona que acceda a la interfaz puede hacer preguntas. No hay personalización del contenido según el perfil del empleado.
+- **Costes asociados**: Cada pregunta enviada al modelo generativo (GPT-4) tiene un coste si se usa la API comercial.
+
+---
+
+### 🚀 Posibles mejoras futuras
+
+- **Integración con bases de datos reales de RRHH**: Conexión a portales internos, wikis corporativas o gestores documentales para mantener la información actualizada.
+- **Mejor control de acceso**: Añadir login, perfilado de empleados y filtrado de respuestas según rol (interno, externo, becario...).
+- **Respuestas multilingües**: Ampliar la capacidad del sistema para responder en varios idiomas dependiendo del idioma de la pregunta.
+- **Sustitución de GPT-4 por modelos open source**: Migración a Llama 3 o Mixtral para eliminar la dependencia de servicios externos y garantizar privacidad.
+- **Evaluación automática de calidad**: Añadir métricas de precisión o feedback de usuario para mejorar continuamente el sistema.
+
+---
+
