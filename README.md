@@ -152,7 +152,7 @@ pip install -r requirements.txt
 export OPENAI_API_KEY="tu_clave_aquí"
 
 # En Windows CMD
-set OPENAI_API_KEY=tu_clave_aquí
+$env:OPENAI_API_KEY="tu_clave_aquí"
 ```
 
 ### 5. Genera el índice vectorial
@@ -164,7 +164,6 @@ python embed_and_index.py
 ### 6. Lanza la aplicación web
 
 ```bash
-$env:OPENAI_API_KEY="LA CLAVE..."
 streamlit run interface.py
 ```
 
