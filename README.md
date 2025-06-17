@@ -21,7 +21,22 @@ Reducir la carga del equipo de Recursos Humanos y mejorar la experiencia del nue
 
 ## 📁 Estructura del proyecto
 
-<pre lang="markdown"><code>```text onboarding-ai-assistant/ │ ├── data/ │ ├── manual_bienvenida.txt │ ├── politica_vacaciones.txt │ └── faq_rrhh.txt │ ├── app/ │ ├── embed_and_index.py # Vectorización e indexado │ ├── rag_pipeline.py # Búsqueda + generación │ └── interface.py # Interfaz con Streamlit │ ├── requirements.txt └── README.md ```</code></pre>
+```text
+onboarding-ai-assistant/
+│
+├── data/
+│   ├── manual_bienvenida.txt
+│   ├── politica_vacaciones.txt
+│   └── faq_rrhh.txt
+│
+├── app/
+│   ├── embed_and_index.py       # Vectorización e indexado
+│   ├── rag_pipeline.py          # Búsqueda + generación
+│   └── interface.py             # Interfaz con Streamlit
+│
+├── requirements.txt
+└── README.md
+```
 
 ---
 
